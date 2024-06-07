@@ -25,6 +25,16 @@ int main(){
     string event;
     string error_msg;
 
+    while(cin>>operation){
+        if(operation=="Add"){
+            cin>>date_str>>event;
+            if(validate_date(date_str, error_msg)){
+                add_event(events, date_str, event);
+            } else{
+                cout<<error_msg<<endl;
+            }
+        }
+    }
     return 0;
 }
 
