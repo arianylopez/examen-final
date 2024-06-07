@@ -33,6 +33,10 @@ int main(){
             } else{
                 cout<<error_msg<<endl;
             }
+        } else if(operation=="Del"){
+            cin>>date_str>>event;
+            if(validate_date(date_str, error_msg)){
+            }
         }
     }
     return 0;
