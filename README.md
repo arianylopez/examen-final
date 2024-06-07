@@ -181,3 +181,41 @@ La creación de una nueva base de datos específicamente para este proyecto tien
 - 3. Control total sobre el desarrollo: Desarrollar un sistema desde cero ofrece control total y brindar seguridad al cliente sobre su funcionamiento, permitiendo ajustes y personalización según evolucionen los requisitos.
 
 # Estructura del Repositorio 
+El repositorio se compone de 4 documentos importantes:
+- README.md: Explicación detallada del proyecto, aqui encontramos desde donde nace la idea de realizar el trabajo hasta la lógica implementada.
+- examenfinal.cpp, examenfinal.h y main.cpp: Documentos partes del código fuente de manera modular, en examenfinal.cpp vemos como trabajan las diferentes funciones del código a tráves del cuerpo de cada una, luego en examenfinal.h encontramos los prototipos de las funciones y bibliotecas implementadas, y por último, main.cpp donde implementamos los comandos y las entradas para que el usuario ingrese los datos correspondientes.
+
+# Descripción de funciones y estructuras
+### - struct Date:
+Mantiene los componentes de año, mes, día de una fecha ingresada por el usuario, de tipo de dato entero para el uso a largo de todo el código.
+
+### void add_event(map<string, set<string>>& events, const string& date_str, const string& event)
+Esta funcionalidad agrega un evento a la fecha especificada, teniendo como entradas un mapa de eventos, la fecha que se debe agregar al evento en formato YYYY-MM-DD, y por último la descripción del evento que el usuario va a agregar.
+
+### bool delete_event(map<string, set<string>>& events, const string& date_str, const string& event)
+Esta función elimina un evento específico de una fecha especificada, con salida bool para indicar si el evento fue eliminado con éxito o no.
+
+### bool validate_date(const string& date_str, string& error_msg)
+El propósito de esta función es validar el formato de la fecha y verifica si es válida, como entradas teniendo la cadena de la fecha a validad en formato YYYY-MM-DD, y referencia a una cadena que contendrá el mensaje de error si la fecha es inválida.
+
+### int delete_date(map<string, set<string>>& events, const string& date_str)
+Esta función elimina todos los eventos de una fecha especifica, teniendo como entradas el mapa de eventos y la fecha la cual se deben eliminar todos los eventos, y retornando un tipo de dato entero indicando el número de eventos eliminados.
+
+### set<string> find(map<string, set<string>>& events, const string& date_str)
+Esta funcionalidad encuentra todos los eventos en una fecha especificada.
+
+### void print_events() 
+El propósito de esta función imprime todos los eventos para todas las fechas almacenadas en el mapa de eventos.
+
+# Diagrama de flujo
+
+# Créditos
+- Krishna Ariany López Melgar: Estudiante de 1er semestre de Ingeniería de Software de la UCB.
+
+# Herramientas utilizadas
+- Lenguaje de Porgramación: C++
+- Compilador: MinGW - VS Code 
+- Editor de Código: Visual Studio Code 
+- Sistemas de Control de Versiones: Git 
+- Diseño de Diagramas de Flujo: draw.io
+- Recolección de Información e Investigación: Páginas Web de Google 
