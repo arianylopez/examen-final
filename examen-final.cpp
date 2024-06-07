@@ -37,6 +37,17 @@ int main(){
         } else if(operation=="Del"){
             cin>>date_str>>event;
             if(validate_date(date_str, error_msg)){
+                if(event.empty()){
+                    cout<<"Deleted "<<delete_date(events, date_str)<<" events"<<endl;
+                } else{
+                    if(delete_event(events, date_str, event)){
+                        cout<<"Deleted successfully"<<endl;
+                    } else{
+                        cout<<"Event not found"<<endl;
+                    }
+                }
+            } else{
+                cout<<error_msg<<endl;
             }
         }
     }
