@@ -19,6 +19,7 @@ void add_event(map<string, set<string>>& events, const string& date_str, const s
 bool delete_event(map<string, set<string>>& events, const string& date_str, const string& event);
 bool validate_date(const string& date_str, string& error_msg);
 int delete_date(map<string, set<string>>& events, const string& date_str);
+set<string> find(map<string, set<string>>& events, const string& date_str);
 
 int main(){
     string operation;
@@ -113,4 +114,12 @@ int delete_date(map<string, set<string>>& events, const string& date_str){
         return count;
     }
     return 0;
+}
+
+set<string> find(map<string, set<string>>& events, const string& date_str){
+    if(events.count(date_str)){
+        return events[date_str];
+    } else{
+        return {};
+    }
 }
