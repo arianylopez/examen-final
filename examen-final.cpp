@@ -20,6 +20,7 @@ bool delete_event(map<string, set<string>>& events, const string& date_str, cons
 bool validate_date(const string& date_str, string& error_msg);
 int delete_date(map<string, set<string>>& events, const string& date_str);
 set<string> find(map<string, set<string>>& events, const string& date_str);
+void print_events();
 
 int main(){
     string operation;
@@ -131,5 +132,35 @@ set<string> find(map<string, set<string>>& events, const string& date_str){
         return events[date_str];
     } else{
         return {};
+    }
+}
+
+void print_events(){
+    for(const auto& item:events){
+        for(const auto& event:item.second){
+            string date=item.first;
+            vector<int> date_parts;
+            string part;
+
+            for(char c:date){
+                if(c=='-'){
+                    date_parts.push_back(stoi(part));
+                    part.clear();
+                } else{
+                    part+=c;
+                }
+            }
+            date_parts.push_back(stoi(part));
+
+            int year=date_parts[0];
+            int month=date_parts[1];
+            int day=date_parts[2];
+
+            cout<<(year<1000 ? "0":"")<<(year<100 ? "0" : "")
+            <<(year<10 ? "0" : "")<<year<<'-'
+            <<(month<10 ? "0" : "")<<month<<'-'
+            <<(day<10 ? "0" : "")<<day<<' '
+            <<event<<endl;
+        }
     }
 }
