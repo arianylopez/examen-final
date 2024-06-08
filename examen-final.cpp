@@ -50,6 +50,16 @@ int main(){
             } else{
                 cout<<error_msg<<endl;
             }
+        } else if(operation=="Find"){
+            cin>>date_str;
+            if(validate_date(date_str, error_msg)){
+                set<string> events_found=find(events, date_str);
+                for(const auto& event:events_found){
+                    cout<<event<<endl;
+                }
+            } else{
+                cout<<error_msg<<endl;
+            }
         }
     }
     return 0;
