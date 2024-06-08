@@ -30,18 +30,22 @@ int main(){
 
     while(cin>>operation){
         if(operation=="Add"){
-            cin>>date_str>>event;
+            cin>>date_str;
+            getline(cin, event);
+            event=event.substr(1);
             if(validate_date(date_str, error_msg)){
                 add_event(events, date_str, event);
             } else{
                 cout<<error_msg<<endl;
             }
         } else if(operation=="Del"){
-            cin>>date_str>>event;
+            cin>>date_str;
+            getline(cin, event);
             if(validate_date(date_str, error_msg)){
                 if(event.empty()){
                     cout<<"Deleted "<<delete_date(events, date_str)<<" events"<<endl;
                 } else{
+                    event=event.substr(1);
                     if(delete_event(events, date_str, event)){
                         cout<<"Deleted successfully"<<endl;
                     } else{
@@ -61,8 +65,13 @@ int main(){
             } else{
                 cout<<error_msg<<endl;
             }
+        } else if(operation=="Print"){
+            print_events();
+        } else{
+            cout<<"Unknown command: "<<operation<<endl;
         }
     }
+    
     return 0;
 }
 
