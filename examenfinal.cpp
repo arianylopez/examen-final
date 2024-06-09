@@ -47,7 +47,7 @@ bool validate_date(const string& date_str, string& error_msg){
     date.day=date_parts[2];
 
     if(date.month<1 || date.month>12){
-        error_msg="Month value is invalid" + to_string(date.month);
+        error_msg="Month value is invalid: " + to_string(date.month);
         return false;
     }
 
