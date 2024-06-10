@@ -190,14 +190,17 @@ El repositorio se compone de 4 documentos importantes:
 Mantiene los componentes de año, mes, día de una fecha ingresada por el usuario, de tipo de dato entero para el uso a largo de todo el código.
 ### void add_event(map<string, set<string>>& events, const string& date_str, const string& event)
 Esta funcionalidad agrega un evento a la fecha especificada, teniendo como entradas un mapa de eventos, la fecha que se debe agregar al evento en formato YYYY-MM-DD, y por último la descripción del evento que el usuario va a agregar.
+
 ![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/7a074d32-0f9c-47f3-814e-0b0715714bea)
 
 ### bool delete_event(map<string, set<string>>& events, const string& date_str, const string& event)
 Esta función elimina un evento específico de una fecha especificada, con salida bool para indicar si el evento fue eliminado con éxito o no.
+
 ![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/232f2c9f-5504-4aec-a9c8-06517a10df89)
 
 ### bool validate_date(const string& date_str, string& error_msg)
 El propósito de esta función es validar el formato de la fecha y verifica si es válida, como entradas teniendo la cadena de la fecha a validad en formato YYYY-MM-DD, y referencia a una cadena que contendrá el mensaje de error si la fecha es inválida.
+
 ![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/b0390e8f-ffb5-431e-b70d-bb0672848725)
 
 ### int delete_date(map<string, set<string>>& events, const string& date_str)
@@ -206,16 +209,21 @@ Esta función elimina todos los eventos de una fecha especifica, teniendo como e
 
 ### set<string> find(map<string, set<string>>& events, const string& date_str)
 Esta funcionalidad encuentra todos los eventos en una fecha especificada.
+
 ![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/118e3cdc-2673-4aeb-adad-621531093efc)
 
 ### void print_events() 
 El propósito de esta función es imprimir todos los eventos para todas las fechas almacenadas en el mapa de eventos.
+
 ![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/1559c5ca-d823-453e-a30a-ced312a9bc6d)
 
 # Pseudocódigo
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/b2c90638-be36-41d2-bf86-c7375ab76699)
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/a2c3ac38-b285-434d-996f-302a3ca86cad)
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/ea37aea4-dcba-4d0d-b4c8-0849c3a9ff07)
+
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/e9dff5ca-45c2-484e-824a-1511d345876b)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/81572adf-a323-4437-b386-db76ad82aef0)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/d1c04217-23f4-4e37-9185-df6aafcee127)
+
+
 Este pseudocódigo describe la implementación de nuestro programa C++ diseñado para gestionar un calendario de eventos. Los comandos soportados incluyen agregar, eliminar eventos o fechas completas, buscar eventos e imprimir todos los eventos si es necesario. El pseudocódigo es una herramienta útil en cuanto a claridad y comprensión, proporcionandonos una estructura clara y bien definida del flujo del programa, nos ayuda a entender la lógica general y el propósito de cada parte del código antes de la implementación. 
 
 # Créditos
