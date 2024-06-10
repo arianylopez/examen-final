@@ -191,31 +191,32 @@ Mantiene los componentes de año, mes, día de una fecha ingresada por el usuari
 ### void add_event(map<string, set<string>>& events, const string& date_str, const string& event)
 Esta funcionalidad agrega un evento a la fecha especificada, teniendo como entradas un mapa de eventos, la fecha que se debe agregar al evento en formato YYYY-MM-DD, y por último la descripción del evento que el usuario va a agregar.
 
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/7a074d32-0f9c-47f3-814e-0b0715714bea)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/41626761-8c76-48b9-ac64-420373191a34)
 
 ### bool delete_event(map<string, set<string>>& events, const string& date_str, const string& event)
 Esta función elimina un evento específico de una fecha especificada, con salida bool para indicar si el evento fue eliminado con éxito o no.
 
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/232f2c9f-5504-4aec-a9c8-06517a10df89)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/e5e6f680-0a1e-4e5c-b599-e272ae6436e0) 
 
 ### bool validate_date(const string& date_str, string& error_msg)
 El propósito de esta función es validar el formato de la fecha y verifica si es válida, como entradas teniendo la cadena de la fecha a validad en formato YYYY-MM-DD, y referencia a una cadena que contendrá el mensaje de error si la fecha es inválida.
 
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/b0390e8f-ffb5-431e-b70d-bb0672848725)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/c774b06b-6269-4c8b-8cfd-150355e098fb) 
 
 ### int delete_date(map<string, set<string>>& events, const string& date_str)
 Esta función elimina todos los eventos de una fecha especifica, teniendo como entradas el mapa de eventos y la fecha la cual se deben eliminar todos los eventos, y retornando un tipo de dato entero indicando el número de eventos eliminados.
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/93fdc966-1f39-4fe4-9986-12edd5de8d44)
+
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/b8935fc8-41cc-4879-bba6-e73da73292b6)
 
 ### set<string> find(map<string, set<string>>& events, const string& date_str)
 Esta funcionalidad encuentra todos los eventos en una fecha especificada.
 
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/118e3cdc-2673-4aeb-adad-621531093efc)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/46171f46-d391-40c2-862f-846a36669f06) 
 
 ### void print_events() 
 El propósito de esta función es imprimir todos los eventos para todas las fechas almacenadas en el mapa de eventos.
 
-![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/1559c5ca-d823-453e-a30a-ced312a9bc6d)
+![image](https://github.com/arianylopez/examen-intro-progra/assets/159574397/9b95c105-3646-4c6d-9dd6-968c7b94b3d8)
 
 # Pseudocódigo
 
